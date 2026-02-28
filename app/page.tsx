@@ -110,6 +110,12 @@ const testimonialsData = [
   },
 ];
 
+const quickStats = [
+  { id: 1, label: "Projects", value: "12+" },
+  { id: 2, label: "Tech Stack", value: "8" },
+  { id: 3, label: "Hackathons", value: "5" },
+];
+
 const navigationItems = [
   { id: 1, label: "About Me", href: "#about" },
   { id: 2, label: "Skills", href: "#skills" },
@@ -173,6 +179,22 @@ export default function Desktop() {
               </div>
             </a>
           </div>
+
+          <div className="flex items-center gap-4 relative self-stretch w-full flex-[0_0_auto]">
+            {quickStats.map((stat) => (
+              <div
+                key={stat.id}
+                className="flex flex-col items-start justify-center w-[170px] h-[76px] px-5 bg-[#e7e9f0] rounded-2xl"
+              >
+                <span className="font-bold text-[#081f62] text-[30px] leading-[1]">
+                  {stat.value}
+                </span>
+                <span className="font-medium text-black text-base leading-[normal]">
+                  {stat.label}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
 
         <Image
@@ -189,6 +211,10 @@ export default function Desktop() {
         className="flex flex-col w-[1051px] h-[958px] items-start gap-2.5 pl-[108px] pr-[84px] pt-[77px] pb-[88px] absolute top-[473px] left-[389px] bg-[#d9d9d9]"
       >
         <div className="flex flex-col w-[858.02px] items-start gap-[15px] relative flex-[0_0_auto]">
+          <p className="text-[#081f62] font-medium text-xl tracking-[0] leading-[normal]">
+            What I use and what I&apos;m currently learning
+          </p>
+
           <h2 className="relative self-stretch mt-[-1.00px] font-bold text-black text-[40px] tracking-[0] leading-[normal]">
             Skills
           </h2>
@@ -197,7 +223,7 @@ export default function Desktop() {
             {skillsData.map((skill) => (
               <article
                 key={skill.id}
-                className="relative w-[410.22px] h-[348.86px] bg-[#e7e9f0] rounded-[20px]"
+                className="relative w-[410.22px] h-[348.86px] bg-[#e7e9f0] rounded-[20px] transition-transform duration-200 hover:-translate-y-1"
               >
                 <div className="flex flex-col w-[334px] items-start gap-[23px] relative top-[30px] left-[29px]">
                   <Image
@@ -226,6 +252,10 @@ export default function Desktop() {
         id="featured-projects"
         className="flex flex-col w-[1051px] h-[1340px] items-start gap-11 pl-[110px] pr-[85px] py-[99px] absolute top-[1429px] left-[389px] bg-[#f4f4f4]"
       >
+        <p className="text-[#081f62] font-medium text-xl tracking-[0] leading-[normal]">
+          Selected work and experiments
+        </p>
+
         <h2 className="relative self-stretch mt-[-1.00px] font-bold text-black text-[40px] tracking-[0] leading-[normal]">
           Featured Projects
         </h2>
@@ -234,12 +264,16 @@ export default function Desktop() {
           {projectsData.map((project) => (
             <article
               key={project.id}
-              className="relative w-[410.22px] h-[511px] bg-[#e7e9f0] rounded-[20px] overflow-hidden"
+              className="relative w-[410.22px] h-[511px] bg-[#e7e9f0] rounded-[20px] overflow-hidden transition-transform duration-200 hover:-translate-y-1"
             >
               <div className="relative self-stretch w-full h-[232.46px] bg-white" />
               <div className="relative self-stretch w-full h-[278px] bg-[#d9d9d9]" />
               <div className="flex flex-col w-[334px] items-start gap-[19px] absolute top-[251px] left-6">
                 <div className="flex flex-col h-[178px] items-start relative self-stretch w-full">
+                  <span className="inline-flex items-center justify-center px-3 py-1 rounded-full bg-[#081f62] text-white text-sm font-medium mb-2">
+                    Case Study
+                  </span>
+
                   <h3 className="relative self-stretch mt-[-1.00px] font-bold text-[#081f62] text-[32px] tracking-[0] leading-[normal]">
                     {project.title}
                   </h3>
@@ -265,6 +299,10 @@ export default function Desktop() {
       </section>
 
       <section className="absolute top-[2769px] left-[389px] w-[1051px] h-[530px] pl-[110px] pr-[85px] pt-[83px] bg-[#d9d9d9]">
+        <p className="text-[#081f62] font-medium text-xl tracking-[0] leading-[normal]">
+          Feedback from people I&apos;ve worked with
+        </p>
+
         <h2 className="w-[856px] font-bold text-black text-[40px] tracking-[0] leading-[normal]">
           Testimonials
         </h2>
@@ -273,7 +311,7 @@ export default function Desktop() {
           {testimonialsData.map((testimonial) => (
             <figure
               key={testimonial.id}
-              className="relative w-[410.22px] h-[258px]"
+              className="relative w-[410.22px] h-[258px] transition-transform duration-200 hover:-translate-y-1"
               role="region"
               aria-label="Customer testimonial"
             >
