@@ -43,32 +43,28 @@ const socialLinks = [
     name: "Facebook",
     icon: facebookIcon,
     url: "#",
-    className:
-      "relative flex w-10 h-10 items-center justify-center bg-[#e7e9f0] rounded-[20px]",
+    className: "relative flex items-center justify-center",
   },
   {
     id: 2,
     name: "Mail",
     icon: mailIcon,
     url: "#",
-    className:
-      "relative flex w-10 h-10 items-center justify-center bg-[#e7e9f0] rounded-[20px]",
+    className: "relative flex items-center justify-center",
   },
   {
     id: 3,
     name: "Discord",
     icon: discordIcon,
     url: "#",
-    className:
-      "relative flex w-10 h-10 items-center justify-center bg-[#e7e9f0] rounded-[20px]",
+    className: "relative flex items-center justify-center",
   },
   {
     id: 4,
     name: "Instagram",
     icon: instagramIcon,
     url: "#",
-    className:
-      "relative flex w-10 h-10 items-center justify-center bg-[#e7e9f0] rounded-[20px]",
+    className: "relative flex items-center justify-center",
   },
 ];
 
