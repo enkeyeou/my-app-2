@@ -68,14 +68,57 @@ const socialLinks = [
   },
 ];
 
+const projectsData = [
+  {
+    id: 1,
+    title: "Project 1",
+    description:
+      "Lorem ipsum dolor sit amet. Non galisum itaque et praesentium facere ut vero minus non fugiat galisum non beatae nemo?",
+  },
+  {
+    id: 2,
+    title: "Project 2",
+    description:
+      "Lorem ipsum dolor sit amet. Non galisum itaque et praesentium facere ut vero minus non fugiat galisum non beatae nemo?",
+  },
+  {
+    id: 3,
+    title: "Project 3",
+    description:
+      "Lorem ipsum dolor sit amet. Non galisum itaque et praesentium facere ut vero minus non fugiat galisum non beatae nemo?",
+  },
+  {
+    id: 4,
+    title: "Project 4",
+    description:
+      "Lorem ipsum dolor sit amet. Non galisum itaque et praesentium facere ut vero minus non fugiat galisum non beatae nemo?",
+  },
+];
+
+const testimonialsData = [
+  {
+    id: 1,
+    quote: "Lorem ipsum dolor sit amet. Non galisum itaque et",
+    name: "NK Olmo",
+    title: "Trust me bro",
+  },
+  {
+    id: 2,
+    quote: "Lorem ipsum dolor sit amet. Non galisum itaque et",
+    name: "NK Olmo",
+    title: "Trust me bro",
+  },
+];
+
 const navigationItems = [
   { id: 1, label: "About Me", href: "#about" },
   { id: 2, label: "Skills", href: "#skills" },
+  { id: 3, label: "Featured Projects", href: "#featured-projects" },
 ];
 
 export default function Desktop() {
   return (
-    <div className="bg-[#f4f4f4] w-full min-w-[1440px] min-h-[2701px] relative">
+    <div className="bg-[#f4f4f4] w-full min-w-[1440px] min-h-[3247px] relative">
       <div className="absolute top-[463px] left-[389px] w-[1051px] h-[969px] bg-[#d9d9d9]" />
 
       <section className="flex w-[1051px] h-[471px] items-center gap-[65px] pl-[97px] pr-12 pt-[75px] pb-[93px] absolute top-0.5 left-[389px] bg-[#f4f4f4]">
@@ -143,10 +186,6 @@ export default function Desktop() {
         />
       </section>
 
-      <h2 className="absolute top-[1528px] left-[499px] w-[527px] font-bold text-black text-[40px] tracking-[0] leading-[normal]">
-        Featured Projects
-      </h2>
-
       <section
         id="skills"
         className="flex flex-col w-[858px] items-start gap-[15px] absolute top-[551px] left-[498px]"
@@ -183,7 +222,125 @@ export default function Desktop() {
         </div>
       </section>
 
-      <aside className="fixed top-0 left-0 w-[389px] h-[2701px] bg-[#081f62]">
+      <section
+        id="featured-projects"
+        className="flex flex-col w-[1051px] h-[1340px] items-start gap-11 pl-[110px] pr-[85px] py-[99px] absolute top-[1429px] left-[389px] bg-[#f4f4f4]"
+      >
+        <h2 className="relative self-stretch mt-[-1.00px] font-bold text-black text-[40px] tracking-[0] leading-[normal]">
+          Featured Projects
+        </h2>
+
+        <div className="flex flex-wrap w-[855.44px] items-start gap-[36px_35px] relative flex-[0_0_auto] mb-[-0.72px]">
+          {projectsData.map((project, index) => (
+            <article
+              key={project.id}
+              className={`flex flex-col ${index === 0 ? "w-[410px] h-[511px] rounded-[338px]" : "w-[410.22px]"} items-start relative`}
+            >
+              {index === 0 ? (
+                <div className="flex flex-col w-[410px] items-start relative top-[7px]">
+                  <div className="relative self-stretch w-full h-[232.46px] bg-white" />
+                  <div className="relative self-stretch w-full h-[271.84px] bg-[#d9d9d9]" />
+                  <div className="flex flex-col w-[334px] items-start gap-[19px] absolute top-[251px] left-6">
+                    <div className="flex flex-col h-[178px] items-start relative self-stretch w-full">
+                      <h3 className="relative self-stretch mt-[-1.00px] font-bold text-[#081f62] text-[32px] tracking-[0] leading-[normal]">
+                        {project.title}
+                      </h3>
+                      <p className="relative flex-1 self-stretch font-medium text-black text-2xl tracking-[0] leading-[normal]">
+                        {project.description}
+                      </p>
+                    </div>
+                    <a
+                      href="#"
+                      className="inline-flex items-center relative flex-[0_0_auto]"
+                    >
+                      <span className="relative w-[134.79px] mt-[-1.00px] font-bold text-[#081f62] text-2xl tracking-[0] leading-[normal] underline">
+                        Learn More
+                      </span>
+                      <span className="relative w-[26.82px] h-[26.82px] text-[#081f62] text-2xl leading-[1]">
+                        ↗
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              ) : (
+                <>
+                  <div className="relative self-stretch w-full h-[232.46px] bg-white" />
+                  <div className="relative self-stretch w-full h-[271.84px] bg-[#d9d9d9]" />
+                  <div className="flex flex-col w-[334px] items-start gap-[19px] absolute top-[251px] left-6">
+                    <div className="flex flex-col h-[178px] items-start relative self-stretch w-full">
+                      <h3 className="relative self-stretch mt-[-1.00px] font-bold text-[#081f62] text-[32px] tracking-[0] leading-[normal]">
+                        {project.title}
+                      </h3>
+                      <p className="relative flex-1 self-stretch font-medium text-black text-2xl tracking-[0] leading-[normal]">
+                        {project.description}
+                      </p>
+                    </div>
+                    <a
+                      href="#"
+                      className="inline-flex items-center relative flex-[0_0_auto]"
+                    >
+                      <span className="relative w-[134.79px] mt-[-1.00px] font-bold text-[#081f62] text-2xl tracking-[0] leading-[normal] underline">
+                        Learn More
+                      </span>
+                      <span className="relative w-[26.82px] h-[26.82px] text-[#081f62] text-2xl leading-[1]">
+                        ↗
+                      </span>
+                    </a>
+                  </div>
+                </>
+              )}
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="absolute top-[2769px] left-[389px] w-[1051px] h-[530px]">
+        <h2 className="absolute top-[83px] left-[110px] w-[856px] font-bold text-black text-[40px] tracking-[0] leading-[normal]">
+          Testimonials
+        </h2>
+
+        <div className="absolute top-[155px] left-0 w-[1051px] h-[375px] flex gap-[30px]">
+          {testimonialsData.map((testimonial) => (
+            <figure
+              key={testimonial.id}
+              className="relative w-[510px] h-[258px]"
+              role="region"
+              aria-label="Customer testimonial"
+            >
+              <div className="absolute top-0.5 left-0 w-[410px] h-64 bg-[#e7e9f0] rounded-[20px]" />
+
+              <Image
+                className="absolute top-[162px] left-[38px] w-[70px] h-[70px] aspect-[1] object-cover rounded-full"
+                alt={`${testimonial.name} profile picture`}
+                src={profileImage}
+                width={70}
+                height={70}
+              />
+
+              <blockquote className="absolute top-20 left-[38px] w-[334px] font-medium text-black text-2xl tracking-[0] leading-[normal]">
+                {testimonial.quote}
+              </blockquote>
+
+              <figcaption className="absolute top-[172px] left-[126px] w-[334px] font-normal text-[#081f62] text-2xl tracking-[0] leading-[normal]">
+                <span className="font-bold">
+                  {testimonial.name}
+                  <br />
+                </span>
+                <span>{testimonial.title}</span>
+              </figcaption>
+
+              <div
+                className="absolute top-0 left-6 w-[114px] font-bold text-black text-8xl tracking-[0] leading-[normal]"
+                aria-hidden="true"
+              >
+                &quot;
+              </div>
+            </figure>
+          ))}
+        </div>
+      </section>
+
+      <aside className="fixed top-0 left-0 w-[389px] h-[3247px] bg-[#081f62]">
         <nav className="absolute top-[492px] left-[69px]">
           {navigationItems.map((item) => (
             <a
