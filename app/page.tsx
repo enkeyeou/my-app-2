@@ -120,23 +120,6 @@ const quickStats = [
   { id: 3, label: "Hackathons", value: "5" },
 ];
 
-const experienceData = [
-  {
-    id: 1,
-    role: "Frontend Developer Intern",
-    company: "Sample Startup",
-    period: "2025 - Present",
-    summary: "Built UI components and collaborated with design and QA teams.",
-  },
-  {
-    id: 2,
-    role: "Freelance Web Developer",
-    company: "Student Projects",
-    period: "2024 - 2025",
-    summary: "Delivered landing pages and portfolio sites for local clients.",
-  },
-];
-
 const contactLinks = [
   {
     id: 1,
@@ -162,13 +145,12 @@ const navigationItems = [
   { id: 1, label: "About Me", href: "#about" },
   { id: 2, label: "Skills", href: "#skills" },
   { id: 3, label: "Featured Projects", href: "#featured-projects" },
-  { id: 4, label: "Experience", href: "#experience" },
-  { id: 5, label: "Contact", href: "#contact" },
+  { id: 4, label: "Contact", href: "#contact" },
 ];
 
 export default function Desktop() {
   return (
-    <div className="bg-[#f4f4f4] w-full min-w-[1440px] min-h-[4145px] relative">
+    <div className="bg-[#f4f4f4] w-full min-w-[1440px] min-h-[3715px] relative">
       <section className="flex w-[1051px] h-[471px] items-center gap-[65px] pl-[97px] pr-12 pt-[75px] pb-[93px] absolute top-0.5 left-[389px] bg-[#f4f4f4]">
         <div className="flex flex-col w-[551px] items-start gap-[21px] relative">
           <header className="flex flex-col w-[527px] items-start relative flex-[0_0_auto]">
@@ -394,47 +376,8 @@ export default function Desktop() {
       </section>
 
       <section
-        id="experience"
-        className="absolute top-[3299px] left-[389px] w-[1051px] h-[430px] pl-[110px] pr-[85px] pt-[72px] bg-[#f4f4f4]"
-      >
-        <p className="text-[#081f62] font-medium text-xl tracking-[0] leading-[normal]">
-          Journey and hands-on work
-        </p>
-
-        <h2 className="w-[856px] mt-1 font-bold text-black text-[40px] tracking-[0] leading-[normal]">
-          Experience
-        </h2>
-
-        <div className="mt-7 flex w-[855.44px] flex-col gap-5">
-          {experienceData.map((experience) => (
-            <article
-              key={experience.id}
-              className="w-full rounded-[20px] bg-[#e7e9f0] p-6 border-l-[6px] border-[#081f62]"
-            >
-              <div className="flex items-start justify-between">
-                <div>
-                  <h3 className="font-bold text-[#081f62] text-[30px] leading-[1.1]">
-                    {experience.role}
-                  </h3>
-                  <p className="mt-1 text-black text-xl font-medium">
-                    {experience.company}
-                  </p>
-                </div>
-                <span className="text-[#081f62] text-lg font-bold">
-                  {experience.period}
-                </span>
-              </div>
-              <p className="mt-3 text-black text-xl leading-[1.35]">
-                {experience.summary}
-              </p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section
         id="contact"
-        className="absolute top-[3729px] left-[389px] w-[1051px] h-[416px] pl-[110px] pr-[85px] pt-[72px] bg-[#d9d9d9]"
+        className="absolute top-[3299px] left-[389px] w-[1051px] h-[416px] pl-[110px] pr-[85px] pt-[72px] bg-[#d9d9d9]"
       >
         <p className="text-[#081f62] font-medium text-xl tracking-[0] leading-[normal]">
           Let&apos;s build something great
@@ -476,7 +419,7 @@ export default function Desktop() {
         </div>
       </section>
 
-      <aside className="fixed top-0 left-0 w-[389px] h-[4145px] bg-[#081f62]">
+      <aside className="fixed top-0 left-0 w-[389px] h-[3715px] bg-[#081f62]">
         <nav className="absolute top-[492px] left-[69px]">
           {navigationItems.map((item) => (
             <a
@@ -526,10 +469,10 @@ export default function Desktop() {
             ))}
           </div>
 
-          <div className="w-full rounded-[20px] bg-[#e7e9f0] p-4 mt-3">
-            <p className="text-[#081f62] font-bold text-lg">Available For</p>
-            <p className="text-black font-medium text-base mt-1">
-              Internship • Freelance • Collaboration
+          <div className="w-full rounded-[20px] bg-[#e7e9f0] px-5 py-4 mt-3 border-l-4 border-[#081f62]">
+            <p className="text-[#081f62] font-bold text-lg">Available for</p>
+            <p className="text-black font-medium text-[15px] mt-2 leading-[1.45]">
+              Internship, freelance work, and collaboration.
             </p>
           </div>
         </div>
