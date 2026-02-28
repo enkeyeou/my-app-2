@@ -1,31 +1,36 @@
 import Image from "next/image";
 import profileImage from "../pictures/2x2.jpg";
+import vectorIcon from "../pictures/Vector.svg";
+import facebookIcon from "../pictures/Frame 9.svg";
+import mailIcon from "../pictures/Frame 8.svg";
+import discordIcon from "../pictures/Frame 6.svg";
+import instagramIcon from "../pictures/Frame 7.svg";
 
 const skillsData = [
   {
     id: 1,
-    icon: "/next.svg",
+    icon: vectorIcon,
     title: "Python",
     description:
       "Lorem ipsum dolor sit amet. Non galisum itaque et praesentium facere ut vero minus non fugiat galisum non beatae nemo?",
   },
   {
     id: 2,
-    icon: "/file.svg",
+    icon: vectorIcon,
     title: "Python",
     description:
       "Lorem ipsum dolor sit amet. Non galisum itaque et praesentium facere ut vero minus non fugiat galisum non beatae nemo?",
   },
   {
     id: 3,
-    icon: "/globe.svg",
+    icon: vectorIcon,
     title: "Python",
     description:
       "Lorem ipsum dolor sit amet. Non galisum itaque et praesentium facere ut vero minus non fugiat galisum non beatae nemo?",
   },
   {
     id: 4,
-    icon: "/window.svg",
+    icon: vectorIcon,
     title: "Python",
     description:
       "Lorem ipsum dolor sit amet. Non galisum itaque et praesentium facere ut vero minus non fugiat galisum non beatae nemo?",
@@ -36,7 +41,7 @@ const socialLinks = [
   {
     id: 1,
     name: "Facebook",
-    icon: "F",
+    icon: facebookIcon,
     url: "#",
     className:
       "relative flex w-10 h-10 items-center justify-center bg-[#e7e9f0] rounded-[20px]",
@@ -44,7 +49,7 @@ const socialLinks = [
   {
     id: 2,
     name: "Mail",
-    icon: "✉",
+    icon: mailIcon,
     url: "#",
     className:
       "relative flex w-10 h-10 items-center justify-center bg-[#e7e9f0] rounded-[20px]",
@@ -52,15 +57,15 @@ const socialLinks = [
   {
     id: 3,
     name: "Discord",
-    icon: "D",
+    icon: discordIcon,
     url: "#",
     className:
       "relative flex w-10 h-10 items-center justify-center bg-[#e7e9f0] rounded-[20px]",
   },
   {
     id: 4,
-    name: "LinkedIn",
-    icon: "in",
+    name: "Instagram",
+    icon: instagramIcon,
     url: "#",
     className:
       "relative flex w-10 h-10 items-center justify-center bg-[#e7e9f0] rounded-[20px]",
@@ -234,7 +239,12 @@ export default function Desktop() {
                 aria-label={social.name}
                 role="listitem"
               >
-                <span className="font-bold text-[#081f62]">{social.icon}</span>
+                <Image
+                  src={social.icon}
+                  alt={`${social.name} icon`}
+                  width={18}
+                  height={18}
+                />
               </a>
             ))}
           </div>
