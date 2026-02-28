@@ -43,28 +43,28 @@ const socialLinks = [
     name: "Facebook",
     icon: facebookIcon,
     url: "#",
-    className: "relative flex items-center justify-center",
+    className: "relative flex w-10 h-10 items-center justify-center",
   },
   {
     id: 2,
     name: "Mail",
     icon: mailIcon,
     url: "#",
-    className: "relative flex items-center justify-center",
+    className: "relative flex w-10 h-10 items-center justify-center",
   },
   {
     id: 3,
     name: "Discord",
     icon: discordIcon,
     url: "#",
-    className: "relative flex items-center justify-center",
+    className: "relative flex w-10 h-10 items-center justify-center",
   },
   {
     id: 4,
     name: "Instagram",
     icon: instagramIcon,
     url: "#",
-    className: "relative flex items-center justify-center",
+    className: "relative flex w-10 h-10 items-center justify-center",
   },
 ];
 
@@ -135,7 +135,7 @@ export default function Desktop() {
         </div>
 
         <Image
-          className="w-[290px] h-[290px] mr-[-0.34px] relative aspect-[1] object-cover rounded-full"
+          className="w-[290px] h-[290px] mr-[-0.34px] relative aspect-[1] object-cover"
           alt="NK Olmo profile"
           src={profileImage}
           width={290}
@@ -216,7 +216,7 @@ export default function Desktop() {
           </h1>
 
           <Image
-            className="self-stretch w-full relative aspect-[1] object-cover rounded-full bg-white p-8"
+            className="self-stretch w-full relative aspect-[1] object-cover"
             alt="NK Olmo profile"
             src={profileImage}
             width={250}
@@ -238,8 +238,8 @@ export default function Desktop() {
                 <Image
                   src={social.icon}
                   alt={`${social.name} icon`}
-                  width={18}
-                  height={18}
+                  width={24}
+                  height={24}
                 />
               </a>
             ))}
