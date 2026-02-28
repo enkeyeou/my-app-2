@@ -151,7 +151,10 @@ const navigationItems = [
 export default function Desktop() {
   return (
     <div className="bg-[#f4f4f4] w-full min-w-[1440px] min-h-[3715px] relative">
-      <section className="flex w-[1051px] h-[471px] items-center gap-[65px] pl-[97px] pr-12 pt-[75px] pb-[93px] absolute top-0.5 left-[389px] bg-[#f4f4f4]">
+      <section
+        id="about"
+        className="flex w-[1051px] h-[471px] items-center gap-[65px] pl-[97px] pr-12 pt-[75px] pb-[93px] absolute top-0.5 left-[389px] bg-[#f4f4f4]"
+      >
         <div className="flex flex-col w-[551px] items-start gap-[21px] relative">
           <header className="flex flex-col w-[527px] items-start relative flex-[0_0_auto]">
             <h1 className="relative self-stretch mt-[-1.00px] font-normal text-black text-8xl tracking-[0] leading-[normal]">
@@ -420,13 +423,12 @@ export default function Desktop() {
       </section>
 
       <aside className="fixed top-0 left-0 w-[389px] h-[3715px] bg-[#081f62]">
-        <nav className="absolute top-[492px] left-[69px]">
+        <nav className="absolute top-[492px] left-[69px] flex w-[250px] flex-col gap-5">
           {navigationItems.map((item) => (
             <a
               key={item.id}
               href={item.href}
-              className="block ml-[50px] font-normal text-white text-2xl tracking-[0] leading-[normal] whitespace-nowrap"
-              style={{ marginTop: item.id === 1 ? "0" : "26px" }}
+              className="block w-fit font-normal text-white text-2xl tracking-[0] leading-[normal] whitespace-nowrap rounded-lg px-3 py-1 transition-colors hover:bg-white/10"
             >
               {item.label}
             </a>
