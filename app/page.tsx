@@ -119,8 +119,6 @@ const navigationItems = [
 export default function Desktop() {
   return (
     <div className="bg-[#f4f4f4] w-full min-w-[1440px] min-h-[3247px] relative">
-      <div className="absolute top-[463px] left-[389px] w-[1051px] h-[969px] bg-[#d9d9d9]" />
-
       <section className="flex w-[1051px] h-[471px] items-center gap-[65px] pl-[97px] pr-12 pt-[75px] pb-[93px] absolute top-0.5 left-[389px] bg-[#f4f4f4]">
         <div className="flex flex-col w-[551px] items-start gap-[21px] relative">
           <header className="flex flex-col w-[527px] items-start relative flex-[0_0_auto]">
@@ -188,37 +186,39 @@ export default function Desktop() {
 
       <section
         id="skills"
-        className="flex flex-col w-[858px] items-start gap-[15px] absolute top-[551px] left-[498px]"
+        className="flex flex-col w-[1051px] h-[958px] items-start gap-2.5 pl-[108px] pr-[84px] pt-[77px] pb-[88px] absolute top-[473px] left-[389px] bg-[#d9d9d9]"
       >
-        <h2 className="relative self-stretch mt-[-1.00px] font-bold text-black text-[40px] tracking-[0] leading-[normal]">
-          Skills
-        </h2>
+        <div className="flex flex-col w-[858.02px] items-start gap-[15px] relative flex-[0_0_auto]">
+          <h2 className="relative self-stretch mt-[-1.00px] font-bold text-black text-[40px] tracking-[0] leading-[normal]">
+            Skills
+          </h2>
 
-        <div className="flex flex-wrap items-start gap-[33px_36px] relative self-stretch w-full flex-[0_0_auto]">
-          {skillsData.map((skill) => (
-            <article
-              key={skill.id}
-              className="relative w-[410.22px] h-[348.86px] bg-[#e7e9f0] rounded-[20px]"
-            >
-              <div className="flex flex-col w-[334px] items-start gap-[23px] relative top-[30px] left-[29px]">
-                <Image
-                  className="relative w-[50px] h-[50px] aspect-[1]"
-                  alt={`${skill.title} icon`}
-                  src={skill.icon}
-                  width={50}
-                  height={50}
-                />
+          <div className="flex flex-wrap items-start gap-[33px_36px] relative self-stretch w-full flex-[0_0_auto]">
+            {skillsData.map((skill) => (
+              <article
+                key={skill.id}
+                className="relative w-[410.22px] h-[348.86px] bg-[#e7e9f0] rounded-[20px]"
+              >
+                <div className="flex flex-col w-[334px] items-start gap-[23px] relative top-[30px] left-[29px]">
+                  <Image
+                    className="relative w-[50px] h-[50px] aspect-[1]"
+                    alt={`${skill.title} icon`}
+                    src={skill.icon}
+                    width={50}
+                    height={50}
+                  />
 
-                <h3 className="relative self-stretch font-bold text-[#081f62] text-[32px] tracking-[0] leading-[normal]">
-                  {skill.title}
-                </h3>
+                  <h3 className="relative self-stretch font-bold text-[#081f62] text-[32px] tracking-[0] leading-[normal]">
+                    {skill.title}
+                  </h3>
 
-                <p className="relative self-stretch font-medium text-black text-2xl tracking-[0] leading-[normal]">
-                  {skill.description}
-                </p>
-              </div>
-            </article>
-          ))}
+                  <p className="relative self-stretch font-medium text-black text-2xl tracking-[0] leading-[normal]">
+                    {skill.description}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -231,64 +231,34 @@ export default function Desktop() {
         </h2>
 
         <div className="flex flex-wrap w-[855.44px] items-start gap-[36px_35px] relative flex-[0_0_auto] mb-[-0.72px]">
-          {projectsData.map((project, index) => (
+          {projectsData.map((project) => (
             <article
               key={project.id}
-              className={`flex flex-col ${index === 0 ? "w-[410px] h-[511px] rounded-[338px]" : "w-[410.22px]"} items-start relative`}
+              className="relative w-[410.22px] h-[511px] bg-[#e7e9f0] rounded-[20px] overflow-hidden"
             >
-              {index === 0 ? (
-                <div className="flex flex-col w-[410px] items-start relative top-[7px]">
-                  <div className="relative self-stretch w-full h-[232.46px] bg-white" />
-                  <div className="relative self-stretch w-full h-[271.84px] bg-[#d9d9d9]" />
-                  <div className="flex flex-col w-[334px] items-start gap-[19px] absolute top-[251px] left-6">
-                    <div className="flex flex-col h-[178px] items-start relative self-stretch w-full">
-                      <h3 className="relative self-stretch mt-[-1.00px] font-bold text-[#081f62] text-[32px] tracking-[0] leading-[normal]">
-                        {project.title}
-                      </h3>
-                      <p className="relative flex-1 self-stretch font-medium text-black text-2xl tracking-[0] leading-[normal]">
-                        {project.description}
-                      </p>
-                    </div>
-                    <a
-                      href="#"
-                      className="inline-flex items-center relative flex-[0_0_auto]"
-                    >
-                      <span className="relative w-[134.79px] mt-[-1.00px] font-bold text-[#081f62] text-2xl tracking-[0] leading-[normal] underline">
-                        Learn More
-                      </span>
-                      <span className="relative w-[26.82px] h-[26.82px] text-[#081f62] text-2xl leading-[1]">
-                        ↗
-                      </span>
-                    </a>
-                  </div>
+              <div className="relative self-stretch w-full h-[232.46px] bg-white" />
+              <div className="relative self-stretch w-full h-[278px] bg-[#d9d9d9]" />
+              <div className="flex flex-col w-[334px] items-start gap-[19px] absolute top-[251px] left-6">
+                <div className="flex flex-col h-[178px] items-start relative self-stretch w-full">
+                  <h3 className="relative self-stretch mt-[-1.00px] font-bold text-[#081f62] text-[32px] tracking-[0] leading-[normal]">
+                    {project.title}
+                  </h3>
+                  <p className="relative flex-1 self-stretch font-medium text-black text-2xl tracking-[0] leading-[normal]">
+                    {project.description}
+                  </p>
                 </div>
-              ) : (
-                <>
-                  <div className="relative self-stretch w-full h-[232.46px] bg-white" />
-                  <div className="relative self-stretch w-full h-[271.84px] bg-[#d9d9d9]" />
-                  <div className="flex flex-col w-[334px] items-start gap-[19px] absolute top-[251px] left-6">
-                    <div className="flex flex-col h-[178px] items-start relative self-stretch w-full">
-                      <h3 className="relative self-stretch mt-[-1.00px] font-bold text-[#081f62] text-[32px] tracking-[0] leading-[normal]">
-                        {project.title}
-                      </h3>
-                      <p className="relative flex-1 self-stretch font-medium text-black text-2xl tracking-[0] leading-[normal]">
-                        {project.description}
-                      </p>
-                    </div>
-                    <a
-                      href="#"
-                      className="inline-flex items-center relative flex-[0_0_auto]"
-                    >
-                      <span className="relative w-[134.79px] mt-[-1.00px] font-bold text-[#081f62] text-2xl tracking-[0] leading-[normal] underline">
-                        Learn More
-                      </span>
-                      <span className="relative w-[26.82px] h-[26.82px] text-[#081f62] text-2xl leading-[1]">
-                        ↗
-                      </span>
-                    </a>
-                  </div>
-                </>
-              )}
+                <a
+                  href="#"
+                  className="inline-flex items-center relative flex-[0_0_auto]"
+                >
+                  <span className="relative w-[134.79px] mt-[-1.00px] font-bold text-[#081f62] text-2xl tracking-[0] leading-[normal] underline">
+                    Learn More
+                  </span>
+                  <span className="relative w-[26.82px] h-[26.82px] text-[#081f62] text-2xl leading-[1]">
+                    ↗
+                  </span>
+                </a>
+              </div>
             </article>
           ))}
         </div>
@@ -307,7 +277,7 @@ export default function Desktop() {
               role="region"
               aria-label="Customer testimonial"
             >
-              <div className="absolute top-0.5 left-0 w-[410px] h-64 bg-[#e7e9f0] rounded-[20px]" />
+              <div className="absolute top-0 left-0 w-[410.22px] h-[258px] bg-[#e7e9f0] rounded-[20px]" />
 
               <Image
                 className="absolute top-[162px] left-[38px] w-[70px] h-[70px] aspect-[1] object-cover rounded-full"
@@ -330,7 +300,7 @@ export default function Desktop() {
               </figcaption>
 
               <div
-                className="absolute top-0 left-6 w-[114px] font-bold text-black text-8xl tracking-[0] leading-[normal]"
+                className="absolute top-[-10px] left-6 w-[114px] font-bold text-[#081f62] text-8xl tracking-[0] leading-[normal]"
                 aria-hidden="true"
               >
                 &quot;
