@@ -72,24 +72,28 @@ const projectsData = [
   {
     id: 1,
     title: "Project 1",
+    type: "Case Study",
     description:
       "Lorem ipsum dolor sit amet. Non galisum itaque et praesentium facere ut vero minus non fugiat galisum non beatae nemo?",
   },
   {
     id: 2,
     title: "Project 2",
+    type: "Web App",
     description:
       "Lorem ipsum dolor sit amet. Non galisum itaque et praesentium facere ut vero minus non fugiat galisum non beatae nemo?",
   },
   {
     id: 3,
     title: "Project 3",
+    type: "Mobile",
     description:
       "Lorem ipsum dolor sit amet. Non galisum itaque et praesentium facere ut vero minus non fugiat galisum non beatae nemo?",
   },
   {
     id: 4,
     title: "Project 4",
+    type: "Backend",
     description:
       "Lorem ipsum dolor sit amet. Non galisum itaque et praesentium facere ut vero minus non fugiat galisum non beatae nemo?",
   },
@@ -116,15 +120,55 @@ const quickStats = [
   { id: 3, label: "Hackathons", value: "5" },
 ];
 
+const experienceData = [
+  {
+    id: 1,
+    role: "Frontend Developer Intern",
+    company: "Sample Startup",
+    period: "2025 - Present",
+    summary: "Built UI components and collaborated with design and QA teams.",
+  },
+  {
+    id: 2,
+    role: "Freelance Web Developer",
+    company: "Student Projects",
+    period: "2024 - 2025",
+    summary: "Delivered landing pages and portfolio sites for local clients.",
+  },
+];
+
+const contactLinks = [
+  {
+    id: 1,
+    label: "Email",
+    value: "nk.olmo@email.com",
+    href: "mailto:nk.olmo@email.com",
+  },
+  {
+    id: 2,
+    label: "LinkedIn",
+    value: "linkedin.com/in/nkolmo",
+    href: "#",
+  },
+  {
+    id: 3,
+    label: "GitHub",
+    value: "github.com/enkeyeou",
+    href: "#",
+  },
+];
+
 const navigationItems = [
   { id: 1, label: "About Me", href: "#about" },
   { id: 2, label: "Skills", href: "#skills" },
   { id: 3, label: "Featured Projects", href: "#featured-projects" },
+  { id: 4, label: "Experience", href: "#experience" },
+  { id: 5, label: "Contact", href: "#contact" },
 ];
 
 export default function Desktop() {
   return (
-    <div className="bg-[#f4f4f4] w-full min-w-[1440px] min-h-[3247px] relative">
+    <div className="bg-[#f4f4f4] w-full min-w-[1440px] min-h-[4145px] relative">
       <section className="flex w-[1051px] h-[471px] items-center gap-[65px] pl-[97px] pr-12 pt-[75px] pb-[93px] absolute top-0.5 left-[389px] bg-[#f4f4f4]">
         <div className="flex flex-col w-[551px] items-start gap-[21px] relative">
           <header className="flex flex-col w-[527px] items-start relative flex-[0_0_auto]">
@@ -264,26 +308,27 @@ export default function Desktop() {
           {projectsData.map((project) => (
             <article
               key={project.id}
-              className="relative w-[410.22px] h-[511px] bg-[#e7e9f0] rounded-[20px] overflow-hidden transition-transform duration-200 hover:-translate-y-1"
+              className="relative w-[410.22px] h-[511px] bg-[#e7e9f0] rounded-[20px] overflow-hidden transition-transform duration-200 hover:-translate-y-1 shadow-sm hover:shadow-md"
             >
-              <div className="relative self-stretch w-full h-[232.46px] bg-white" />
-              <div className="relative self-stretch w-full h-[278px] bg-[#d9d9d9]" />
-              <div className="flex flex-col w-[334px] items-start gap-[19px] absolute top-[251px] left-6">
-                <div className="flex flex-col h-[178px] items-start relative self-stretch w-full">
-                  <span className="inline-flex items-center justify-center px-3 py-1 rounded-full bg-[#081f62] text-white text-sm font-medium mb-2">
-                    Case Study
+              <div className="relative self-stretch w-full h-[210px] bg-white" />
+              <div className="relative self-stretch w-full h-[301px] bg-[#d9d9d9]" />
+              <div className="flex flex-col w-[334px] h-[245px] items-start absolute top-[236px] left-6">
+                <div className="flex flex-col items-start relative self-stretch w-full flex-1">
+                  <span className="inline-flex items-center justify-center px-3 py-1 rounded-full bg-[#081f62] text-white text-sm font-medium mb-3">
+                    {project.type}
                   </span>
 
-                  <h3 className="relative self-stretch mt-[-1.00px] font-bold text-[#081f62] text-[32px] tracking-[0] leading-[normal]">
+                  <h3 className="relative self-stretch mt-[-1.00px] font-bold text-[#081f62] text-[30px] tracking-[0] leading-[1.1]">
                     {project.title}
                   </h3>
-                  <p className="relative flex-1 self-stretch font-medium text-black text-2xl tracking-[0] leading-[normal]">
+
+                  <p className="relative mt-2 self-stretch font-medium text-black text-[20px] tracking-[0] leading-[1.35]">
                     {project.description}
                   </p>
                 </div>
                 <a
                   href="#"
-                  className="inline-flex items-center relative flex-[0_0_auto]"
+                  className="inline-flex items-center relative flex-[0_0_auto] mt-3"
                 >
                   <span className="relative w-[134.79px] mt-[-1.00px] font-bold text-[#081f62] text-2xl tracking-[0] leading-[normal] underline">
                     Learn More
@@ -348,14 +393,97 @@ export default function Desktop() {
         </div>
       </section>
 
-      <aside className="fixed top-0 left-0 w-[389px] h-[3247px] bg-[#081f62]">
+      <section
+        id="experience"
+        className="absolute top-[3299px] left-[389px] w-[1051px] h-[430px] pl-[110px] pr-[85px] pt-[72px] bg-[#f4f4f4]"
+      >
+        <p className="text-[#081f62] font-medium text-xl tracking-[0] leading-[normal]">
+          Journey and hands-on work
+        </p>
+
+        <h2 className="w-[856px] mt-1 font-bold text-black text-[40px] tracking-[0] leading-[normal]">
+          Experience
+        </h2>
+
+        <div className="mt-7 flex w-[855.44px] flex-col gap-5">
+          {experienceData.map((experience) => (
+            <article
+              key={experience.id}
+              className="w-full rounded-[20px] bg-[#e7e9f0] p-6 border-l-[6px] border-[#081f62]"
+            >
+              <div className="flex items-start justify-between">
+                <div>
+                  <h3 className="font-bold text-[#081f62] text-[30px] leading-[1.1]">
+                    {experience.role}
+                  </h3>
+                  <p className="mt-1 text-black text-xl font-medium">
+                    {experience.company}
+                  </p>
+                </div>
+                <span className="text-[#081f62] text-lg font-bold">
+                  {experience.period}
+                </span>
+              </div>
+              <p className="mt-3 text-black text-xl leading-[1.35]">
+                {experience.summary}
+              </p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section
+        id="contact"
+        className="absolute top-[3729px] left-[389px] w-[1051px] h-[416px] pl-[110px] pr-[85px] pt-[72px] bg-[#d9d9d9]"
+      >
+        <p className="text-[#081f62] font-medium text-xl tracking-[0] leading-[normal]">
+          Let&apos;s build something great
+        </p>
+
+        <h2 className="w-[856px] mt-1 font-bold text-black text-[40px] tracking-[0] leading-[normal]">
+          Contact
+        </h2>
+
+        <div className="mt-8 flex w-[855.44px] gap-[35px]">
+          <div className="w-[410.22px] h-[210px] rounded-[20px] bg-[#e7e9f0] p-7 flex flex-col justify-between">
+            <p className="text-black text-2xl leading-[1.35] font-medium">
+              Open to internships, freelance projects, and collaborations.
+            </p>
+            <a
+              href="mailto:nk.olmo@email.com"
+              className="inline-flex w-fit items-center px-5 py-2 rounded-xl bg-[#081f62] text-white text-lg font-bold"
+            >
+              Send an Email
+            </a>
+          </div>
+
+          <div className="w-[410.22px] h-[210px] rounded-[20px] bg-[#e7e9f0] p-7">
+            <div className="flex flex-col gap-3">
+              {contactLinks.map((link) => (
+                <a
+                  key={link.id}
+                  href={link.href}
+                  className="flex items-center justify-between text-[#081f62]"
+                >
+                  <span className="font-bold text-xl">{link.label}</span>
+                  <span className="font-medium text-lg underline">
+                    {link.value}
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <aside className="fixed top-0 left-0 w-[389px] h-[4145px] bg-[#081f62]">
         <nav className="absolute top-[492px] left-[69px]">
           {navigationItems.map((item) => (
             <a
               key={item.id}
               href={item.href}
               className="block ml-[50px] font-normal text-white text-2xl tracking-[0] leading-[normal] whitespace-nowrap"
-              style={{ marginTop: item.id === 1 ? "0" : "43px" }}
+              style={{ marginTop: item.id === 1 ? "0" : "26px" }}
             >
               {item.label}
             </a>
@@ -396,6 +524,13 @@ export default function Desktop() {
                 />
               </a>
             ))}
+          </div>
+
+          <div className="w-full rounded-[20px] bg-[#e7e9f0] p-4 mt-3">
+            <p className="text-[#081f62] font-bold text-lg">Available For</p>
+            <p className="text-black font-medium text-base mt-1">
+              Internship • Freelance • Collaboration
+            </p>
           </div>
         </div>
       </aside>
