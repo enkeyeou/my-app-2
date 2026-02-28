@@ -294,16 +294,16 @@ export default function Desktop() {
         </div>
       </section>
 
-      <section className="absolute top-[2769px] left-[389px] w-[1051px] h-[530px]">
-        <h2 className="absolute top-[83px] left-[110px] w-[856px] font-bold text-black text-[40px] tracking-[0] leading-[normal]">
+      <section className="absolute top-[2769px] left-[389px] w-[1051px] h-[530px] pl-[110px] pr-[85px] pt-[83px]">
+        <h2 className="w-[856px] font-bold text-black text-[40px] tracking-[0] leading-[normal]">
           Testimonials
         </h2>
 
-        <div className="absolute top-[155px] left-0 w-[1051px] h-[375px] flex gap-[30px]">
+        <div className="mt-[32px] flex w-[855.44px] items-start gap-[35px]">
           {testimonialsData.map((testimonial) => (
             <figure
               key={testimonial.id}
-              className="relative w-[510px] h-[258px]"
+              className="relative w-[410.22px] h-[258px]"
               role="region"
               aria-label="Customer testimonial"
             >
