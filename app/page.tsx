@@ -294,7 +294,7 @@ export default function Desktop() {
         </div>
       </section>
 
-      <section className="absolute top-[2769px] left-[389px] w-[1051px] h-[530px] pl-[110px] pr-[85px] pt-[83px]">
+      <section className="absolute top-[2769px] left-[389px] w-[1051px] h-[530px] pl-[110px] pr-[85px] pt-[83px] bg-[#d9d9d9]">
         <h2 className="w-[856px] font-bold text-black text-[40px] tracking-[0] leading-[normal]">
           Testimonials
         </h2>
