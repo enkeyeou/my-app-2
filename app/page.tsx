@@ -135,7 +135,7 @@ export default function Desktop() {
         </div>
 
         <Image
-          className="w-[290px] h-[290px] mr-[-0.34px] relative aspect-[1] object-cover"
+          className="w-[290px] h-[290px] mr-[-0.34px] relative aspect-[1] object-cover rounded-full"
           alt="NK Olmo profile"
           src={profileImage}
           width={290}
@@ -183,18 +183,6 @@ export default function Desktop() {
         </div>
       </section>
 
-      <article className="absolute top-[1619px] left-[499px] w-[410px] h-[472px] flex flex-col rounded-[338px] overflow-hidden">
-        <Image
-          className="w-[410.22px] h-[239.16px] aspect-[1.72]"
-          alt="Homepage design featured project"
-          src="/next.svg"
-          width={410}
-          height={239}
-        />
-
-        <div className="w-[410.22px] h-[232.46px] bg-[#d9d9d9]" />
-      </article>
-
       <aside className="fixed top-0 left-0 w-[389px] h-[2701px] bg-[#081f62]">
         <nav className="absolute top-[492px] left-[69px]">
           {navigationItems.map((item) => (
@@ -216,7 +204,7 @@ export default function Desktop() {
           </h1>
 
           <Image
-            className="self-stretch w-full relative aspect-[1] object-cover"
+            className="self-stretch w-full relative aspect-[1] object-cover rounded-full"
             alt="NK Olmo profile"
             src={profileImage}
             width={250}
@@ -238,8 +226,8 @@ export default function Desktop() {
                 <Image
                   src={social.icon}
                   alt={`${social.name} icon`}
-                  width={24}
-                  height={24}
+                  width={30}
+                  height={30}
                 />
               </a>
             ))}
